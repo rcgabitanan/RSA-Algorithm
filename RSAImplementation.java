@@ -45,8 +45,8 @@ public class RSAImplementation {
         BigInteger e = keyPair.getE();
         BigInteger d = keyPair.getD();
 
-        System.out.println("Public Key: (n = " + n + ", e = " + e + ")");
-        System.out.println("Private Key: (n = " + n + ", d = " + d + ")");
+        System.out.println("Public Key: (n = " + n + ", e = " + e + ")\n");
+        System.out.println("Private Key: (n = " + n + ", d = " + d + ")\n");
 
         String s;
         Scanner save = new Scanner(System.in);
@@ -56,9 +56,9 @@ public class RSAImplementation {
         String message = s;
 
         BigInteger encryptedMessage = encrypt(message, e, n);
-        System.out.println("Encrypted Message: " + encryptedMessage);
+        System.out.println("\nEncrypted Message: " + encryptedMessage);
 
         String decryptedMessage = decrypt(encryptedMessage, d, n);
-        System.out.println("Decrypted Message: " + decryptedMessage);
+        System.out.println("\nDecrypted Message: " + decryptedMessage);
     }
 }
