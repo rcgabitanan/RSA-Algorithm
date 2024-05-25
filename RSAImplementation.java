@@ -1,5 +1,6 @@
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.util.Scanner;
 
 public class RSAImplementation {
 
@@ -47,7 +48,13 @@ public class RSAImplementation {
         System.out.println("Public Key: (n = " + n + ", e = " + e + ")");
         System.out.println("Private Key: (n = " + n + ", d = " + d + ")");
 
-        String message = "Hello, RSA!";
+        String s;
+        Scanner save = new Scanner(System.in);
+        System.out.println("Input the message that you want to send: ");
+        s = save.nextLine();
+
+        String message = s;
+
         BigInteger encryptedMessage = encrypt(message, e, n);
         System.out.println("Encrypted Message: " + encryptedMessage);
 
